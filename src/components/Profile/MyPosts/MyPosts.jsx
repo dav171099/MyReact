@@ -6,25 +6,37 @@ import {maxLengthCreator, required} from "../../../validators/validators";
 import {Textarea} from "../../common/FormsControls/FormsControls";
 
 
-
-
-const MyPosts = (props) => {
-    let PostsElement = props.posts.map( p => <Post key={p.id} message={p.message} count={p.count}/> );
-    let addNewPost = (values) => {
-        props.addPost(values.newPostText)
+class MyPosts extends React.Component {
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({a:12})
+        }, 3000)
     }
-    return (
-        <div className={s.postsBlock}>
-           <h3>My Posts</h3>
-            <div>
-                <MyPostReduxForm onSubmit={addNewPost} />
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextProps !== this.props || nextState !== this.state
+    }
+
+    render() {
+        console.log("RENDER");
+        let PostsElement = this.props.posts.map(p => <Post key={p.id} message={p.message} count={p.count}/>);
+        let addNewPost = (values) => {
+            this.props.addPost(values.newPostText)
+        }
+        return (
+            <div className={s.postsBlock}>
+                <h3>My Posts</h3>
+                <div>
+                    <MyPostReduxForm onSubmit={addNewPost}/>
+                </div>
+                <div className={s.posts}>
+                    {PostsElement}
+                </div>
             </div>
-            <div className={s.posts}>
-                {PostsElement}
-            </div>
-        </div>
-    );
-};
+        );
+    }
+}
+
 const maxLength10 = maxLengthCreator(10);
 const MyPostForm = (props) => {
     return <form onSubmit={props.handleSubmit}>
