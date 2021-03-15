@@ -1,0 +1,56 @@
+.dialogs{
+    margin-left: 30px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+.dialog{
+    text-align: center;
+    display: inline-block;
+    padding: 30px;
+}
+.dialog img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+.dialog a{
+    color: black;
+    text-decoration: none;
+}
+.dialog a.active{
+    color: gold;
+}
+.dialogsItems{
+    border-right: 4px solid #1E2745;
+    padding: 10px;
+}
+.dialogsItems .active{
+    color: gold;
+}
+
+.messages {
+    margin-left: 70px;
+    padding: 10px;
+}
+.message{
+    width: 400px;
+    margin-top: 10px;
+    border: 2px solid #1E2745;
+    border-radius: 10px 30px 10px 30px;
+    color: gold;
+    padding: 30px;
+}
+.addMessage{
+   margin-top: 20px;
+}
+.button{
+    display: flex;
+    background-color: #1E2745;
+    color: gold;
+    border: 2px solid gold;
+    border-radius: 15px 50px 30px;
+    width: 100px;
+    height: 60px;
+}

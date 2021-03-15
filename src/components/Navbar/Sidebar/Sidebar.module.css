@@ -1,0 +1,29 @@
+.sidebar{
+    box-sizing: border-box;
+    margin-top: 15px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+}
+.friend{
+    border: 2px solid gold;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 15px;
+    justify-content: center;
+    padding: 5px;
+}
+.friend :hover{
+    color: gold;
+    cursor: pointer;
+}
+.friend img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+.friend a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}

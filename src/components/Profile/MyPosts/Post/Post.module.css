@@ -1,0 +1,18 @@
+.item img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+.item{
+    background-color: #1E2745;
+    color: white;
+    display: flex;
+    border: 2px solid gold;
+    margin: 10px 0 0 10px;
+    padding: 20px;
+}
+.count {
+    color: gold;
+    text-align: center;
+    padding-left: 15px;
+}

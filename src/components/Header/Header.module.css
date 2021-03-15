@@ -1,0 +1,22 @@
+.header{
+    grid-area: h;
+    background-color:gold;
+    height: 60px;
+    max-height: 60px;
+  }
+  .img{
+    /*padding: 10px 0 0 15px;*/
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  .loginBlock{
+      float: right;
+
+  }
+  .loginBlock a{
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+  }

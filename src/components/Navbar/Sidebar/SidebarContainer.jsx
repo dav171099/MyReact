@@ -1,0 +1,12 @@
+import React from 'react';
+import {connect} from "react-redux";
+import Sidebar from "../../Navbar/Sidebar/Sidebar";
+let mapStateToProps = (state) => {
+    return{
+        friends: state.sidebar.friends
+    }
+}
+
+const SidebarContainer = connect(mapStateToProps)(Sidebar)
+
+export default SidebarContainer;
